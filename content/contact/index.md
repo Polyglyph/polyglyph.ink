@@ -10,6 +10,6 @@ images: []
 In general we recommend reaching out through the GitHub Community, but
 the main contributor can also be reached by e-mail at:
 
-💌 <a href='mailto:{{< email user="hi" domain="polyglyph.ink" >}}'>{{< email user="hi" domain="polyglyph.ink" >}}</a>
+💌 <a href='mailto:hi@polyglyph.ink'>hi@polyglyph.ink</a>
 
 
