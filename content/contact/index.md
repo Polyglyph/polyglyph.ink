@@ -3,8 +3,13 @@ title: "Contact"
 description: "Drop us an email."
 date: 2020-08-27T19:25:12+02:00
 lastmod: 2020-08-27T19:25:12+02:00
-draft: true
+draft: false
 images: []
 ---
 
-{{< email user="hello" domain="getdoks.org" >}}
+In general we recommend reaching out through the GitHub Community, but
+the main contributor can also be reached by e-mail at:
+
+💌 <a href='mailto:{{< email user="hi" domain="polyglyph.ink" >}}'>{{< email user="hi" domain="polyglyph.ink" >}}</a>
+
+
