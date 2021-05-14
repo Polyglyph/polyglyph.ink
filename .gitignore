@@ -4,3 +4,12 @@ public
 resources
 # Local Netlify folder
 .netlify
+
+# Editor
+.vscode
+
+# Python
+.venv
+
+# Output
+typeface/output

@@ -1,0 +1,13 @@
+{
+    "glyphs": {
+        "U+0030": {
+            "grouping": {
+                "ASCII": ["digits"]
+            },
+            "type": "number",
+            "name": "digit zero",
+            "author": "Jeppe Klitgaard",
+            "contributors": []
+        }
+    }
+}
