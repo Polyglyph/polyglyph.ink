@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "Polyglyph"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "The handwriting-friendly, scientific typeface"
+description = "Polyglyph is a handwriting-friendly typeface for writing unambiguous scientific and mathematical equations and solutions."
 
 ## Open Graph + Twitter Cards
 images = ["doks.png"]
