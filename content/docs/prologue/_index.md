@@ -1,9 +1,9 @@
 ---
 title : "Prologue"
-description: "Prologue Doks."
+description: "Prologue Polyglyph."
 lead: ""
-date: 2020-10-06T08:48:45+00:00
-lastmod: 2020-10-06T08:48:45+00:00
+date: 2021-05-15T21:27:41Z
+lastmod: 2021-05-15T21:27:41Z
 draft: false
 images: []
 ---

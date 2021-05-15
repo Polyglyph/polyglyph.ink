@@ -1,9 +1,9 @@
 ---
 title: "Introduction"
-description: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-lead: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-date: 2020-10-06T08:48:57+00:00
-lastmod: 2020-10-06T08:48:57+00:00
+description: "Polyglyph is a handwriting-friendly typeface for writing unambiguous scientific and mathematical equations and solutions."
+lead: "Polyglyph is a handwriting-friendly typeface for writing unambiguous scientific and mathematical equations and solutions."
+date: 2021-05-15T21:58:22Z
+lastmod: 2021-05-15T21:58:22Z
 draft: false
 images: []
 menu:

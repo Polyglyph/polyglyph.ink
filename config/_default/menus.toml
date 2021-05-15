@@ -30,10 +30,16 @@
   url = "/docs/prologue/"
 
 [[docs]]
-  name = "Help"
+  name = "Glyphs"
   weight = 60
-  identifier = "help"
-  url = "/docs/help/"
+  identifier = "glyphs"
+  url = "/docs/glyphs/"
+
+[[docs]]
+  name = "Contributing"
+  weight = 80
+  identifier = "contributing"
+  url = "/docs/contributing/"
 
 [[social]]
   name = "GitHub"
