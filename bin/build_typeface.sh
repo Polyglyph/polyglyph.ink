@@ -16,7 +16,7 @@ mkdir -p public/temp/typeface_builder/polyglyph_flat
 cp -r typeface/output/* public/temp/typeface_builder/polyglyph
 cp typeface/output_flat/* public/temp/typeface_builder/polyglyph_flat
 
-rm public/polyglyph.zip
+rm -f public/polyglyph.zip
 cd public/temp/typeface_builder
 
 zip -qr ../../polyglyph.zip polyglyph polyglyph_flat
