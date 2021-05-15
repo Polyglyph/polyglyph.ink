@@ -4,6 +4,7 @@ from xml.etree import ElementTree as ET
 from bs4 import BeautifulSoup as BS
 from bs4 import Comment
 import shutil
+import os
 
 DESCRIPTION = "Part of the Polyglyph project. Visit us at polyglyph.ink"
 
@@ -22,17 +23,30 @@ def find_image_object(tag) -> bool:
 def find_pen_object(tag) -> bool:
     return tag.name == "g" and tag["id"] == "Pen"
 
-def process_file(name: str) -> None:
-    fn = svgs / (name + ".svg")
 
-    with open(fn) as f:
+def read_svg(p: Path) -> BS:
+    with open (p) as f:
         soup = BS(f.read(), "xml")
 
+    return soup
+
+
+def write_svg(soup: BS, p: Path) -> None:
+    p.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(p, "w") as f:
+        f.write(soup.prettify())
+
+
+def process_soup(soup: BS, unicode: str) -> None:
+    """
+    Processes a soup object in place.
+    """
     # Remove comments
     strip_comments(soup)
 
     # Retitle
-    soup.title.string = name
+    soup.title.string = unicode
 
     # Redescribe
     soup.desc.string = DESCRIPTION
@@ -49,20 +63,27 @@ def process_file(name: str) -> None:
     pen = soup.find(find_pen_object)
     pen["id"] = "Glyph"
 
-    # Output
-    with open(output / (name + ".svg"), "w") as f:
-        f.write(soup.prettify())
-
 
 if __name__ == "__main__":
     svgs = Path("svgs")
 
     output = Path("output")
+    output_flat = Path("output_flat")
+
     shutil.rmtree(output, ignore_errors=True)
-    output.mkdir()
+    shutil.rmtree(output_flat, ignore_errors=True)
 
-    for input_ in svgs.glob("*.svg"):
-        name = input_.stem
+    print("Processing raw glyphs...")
 
-        print(f"Processing {input_}...")
-        process_file(name)
+    for root, dir, files in os.walk(svgs):
+        for file in files:
+            fp = Path(root, file)
+
+            unicode = fp.stem
+            soup = read_svg(fp)
+
+            process_soup(soup, unicode=unicode)
+
+            # Flat
+            write_svg(soup, output_flat / fp.name)
+            write_svg(soup, Path(output, *fp.parts[1:]))

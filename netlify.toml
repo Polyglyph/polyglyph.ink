@@ -7,16 +7,16 @@
   NPM_VERSION = "7.3.0"
 
 [context.production]
-  command = "npx hugo --gc --minify && npx netlify-lambda build assets/lambda"
+  command = "npx hugo --gc --minify && npx netlify-lambda build assets/lambda && bin/build.sh"
 
 [context.deploy-preview]
-  command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL && bin/build.sh"
 
 [context.branch-deploy]
-  command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL && bin/build.sh"
 
 [context.next]
-  command = "npx hugo --gc --minify && npx netlify-lambda build assets/lambda"
+  command = "npx hugo --gc --minify && npx netlify-lambda build assets/lambda && bin/build.sh"
 
 [context.next.environment]
   HUGO_ENV = "next"
